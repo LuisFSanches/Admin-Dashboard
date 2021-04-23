@@ -1,6 +1,10 @@
 import {useState} from 'react'
 import './App.css';
 
+//------COMPONENTES-----//
+import SideBar from './components/SideBar'
+import NavBar from './components/NavBar'
+
 const App = () => {
   const [sidebarOpen, setSideBarOpen] = useState(false)
 
@@ -13,7 +17,8 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Hello World</h1>
+      <NavBar openSideBar = {openSideBar}/>
+      <SideBar sidebarOpen = {sidebarOpen} closeSideBar = {closeSideBar}/>
     </div>
   );
 }
